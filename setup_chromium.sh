@@ -59,4 +59,6 @@ TargetEnvironment=Unity
 EOF
 sudo chmod +x /usr/share/applications/chromium.desktop
 
+# Download chromium 
+
 sudo /opt/scripts/latest_chrome.sh
