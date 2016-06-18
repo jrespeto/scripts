@@ -12,7 +12,7 @@ unzip chrome-linux.zip
 rm -f chrome-linux.zip
 
 chgrp staff chrome-linux -R
-chmod g+rwx chrome-linux -R
+chmod 775 chrome-linux -R
 cp chrome-linux/chrome_sandbox /usr/local/sbin/chrome-devel-sandbox
 chown root:root /usr/local/sbin/chrome-devel-sandbox
 chmod 4755 /usr/local/sbin/chrome-devel-sandbox
@@ -24,7 +24,7 @@ ln -s chrome_sandbox chrome-sandbox
 
 EOF
 
-sudo chmod +x /opt/scripts/latest_chrome.sh
+sudo chmod 755 /opt/scripts/latest_chrome.sh
 
 # Script to run chromium
 
@@ -36,7 +36,7 @@ export GOOGLE_DEFAULT_CLIENT_SECRET="no"
 export CHROME_DEVEL_SANDBOX=
 
 /opt/chrome-linux/chrome
-sudo chmod +x /opt/scripts/run_chrome.sh
+sudo chmod 755 /opt/scripts/run_chrome.sh
 EOF
 
 # Icon for chromium
@@ -57,7 +57,7 @@ Icon=/opt/chrome-linux/product_logo_48.png
 TargetEnvironment=Unity
 
 EOF
-sudo chmod +x /usr/share/applications/chromium.desktop
+sudo chmod 755 /usr/share/applications/chromium.desktop
 
 # Download chromium 
 
