@@ -1,6 +1,7 @@
 #!/bin/bash
 
-# Script for downloading and updating chromium
+# Script for making a downloader script for setup and updating chromium
+# Also setups an icon for ubuntu.  
 
 sudo mkdir /opt/scripts
 sudo cat <<EOF>/opt/scripts/latest_chrome.sh
