@@ -2,8 +2,9 @@
 
 # Script for downloading and updating demonsaw
 
-sudo mkdir /opt/scripts
-sudo cat <<EOF>/opt/scripts/latest_demonsaw.sh 
+mkdir -m 775 /opt/demonsaw
+mv demonsaw.png /opt/demonsaw/
+sudo cat <<EOF>/opt/scripts/latest_demonsaw.sh
 #!/bin/bash
 
 # this download the latest verions from stable
@@ -11,7 +12,6 @@ sudo cat <<EOF>/opt/scripts/latest_demonsaw.sh
 cd /opt
 echo "Getting Latest Demonsaw"
 rm -f demonsaw_debian_64.tar.gz
-mkdir -m 775 demonsaw
 wget -O  demonsaw_debian_64.tar.gz "http://demonsaw.com/download/3.1.0/demonsaw_debian_64.tar.gz"
 tar -xzf demonsaw_debian_64.tar.gz -C demonsaw
 chgrp -R staff demonsow
@@ -33,7 +33,7 @@ Type=Application
 Terminal=false
 Exec=/opt/demonsaw/demonsaw
 Name=Demonsaw
-Icon=demonsaw
+Icon=/opt/demonsaw/demonsaw.png
 Categories=Internet;Network;WebBrowser;
 Actions=NewWindow
 
