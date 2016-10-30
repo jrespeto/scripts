@@ -13,8 +13,8 @@ cd /opt
 echo "Getting Latest Demonsaw"
 rm -f /opt/demonsaw_debian_64.tar.gz
 wget -O /opt/demonsaw_debian_64.tar.gz "http://demonsaw.com/download/latest/demonsaw_debian_64.tar.gz"
-tar -xzf demonsaw_debian_64.tar.gz -C demonsaw
-chgrp -R staff demonsow
+tar -xzf /opt/demonsaw_debian_64.tar.gz -C /opt/demonsaw
+chgrp -R staff /opt/demonsaw
 rm -f /opt/demonsaw_debian_64.tar.gz
 
 EOF
