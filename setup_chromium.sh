@@ -7,21 +7,21 @@ sudo mkdir /opt/scripts
 sudo cat <<EOF>/opt/scripts/latest_chrome.sh
 #!/bin/bash
 cd /opt
-rm -rf chrome-linux
+rm -rf /opt/chrome-linux
 wget -O chrome-linux.zip https://download-chromium.appspot.com/dl/Linux_x64?type=snapshots
-unzip chrome-linux.zip
-rm -f chrome-linux.zip
+unzip /opt/chrome-linux.zip
+rm -f /opt/chrome-linux.zip
 
-chgrp staff chrome-linux -R
-chmod 775 chrome-linux -R
-cp chrome-linux/chrome_sandbox /usr/local/sbin/chrome-devel-sandbox
+chgrp staff /opt/chrome-linux -R
+chmod 775 /opt/chrome-linux -R
+cp /opt/chrome-linux/chrome_sandbox /usr/local/sbin/chrome-devel-sandbox
 chown root:root /usr/local/sbin/chrome-devel-sandbox
 chmod 4755 /usr/local/sbin/chrome-devel-sandbox
 
-chown root:root chrome-linux/chrome_sandbox
-chmod 4755 chrome-linux/chrome_sandbox
-cd chrome-linux
-ln -s chrome_sandbox chrome-sandbox
+chown root:root /opt/chrome-linux/chrome_sandbox
+chmod 4755 /opt/chrome-linux/chrome_sandbox
+cd /opt/chrome-linux
+ln -s /opt/chrome-linux/chrome_sandbox /opt/chrome-linux/chrome-sandbox
 
 EOF
 
