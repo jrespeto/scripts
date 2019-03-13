@@ -8,7 +8,6 @@ PROMPT_COMMAND='echo -ne "\033]0;`hostname`\007"'
 export PROMPT_COMMAND
 
 export SVN_EDITOR=vim
-export P4CONFIG=~/.perforce
 
 alias l.='ls -dG .*'
 alias ll='ls -lG'
