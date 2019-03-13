@@ -173,15 +173,15 @@ whois -ah whois.pwhois.org "routeview prefix=$1"
 }
 
 random_alpha(){
-cat /dev/random | LC_CTYPE=C tr -dc "[:alpha:]" | head -c $1
+cat /dev/urandom | LC_CTYPE=C tr -dc "[:alpha:]" | head -c $1
 }
 
 random_alpha_num(){
-cat /dev/random | LC_CTYPE=C tr -dc "[:alnum:]" | head -c $1
+cat /dev/urandom | LC_CTYPE=C tr -dc "[:alnum:]" | head -c $1
 }
 
 random_num(){
-cat /dev/random | LC_CTYPE=C tr -dc "[:digit:]" | head -c $1;
+cat /dev/urandom | LC_CTYPE=C tr -dc "[:digit:]" | head -c $1;
 }
 
 torcurl() {
