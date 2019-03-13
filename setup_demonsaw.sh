@@ -11,11 +11,11 @@ sudo cat <<EOF>/opt/scripts/latest_demonsaw.sh
 
 cd /opt
 echo "Getting Latest Demonsaw"
-rm -f /opt/demonsaw_debian_64.tar.gz
-wget -O /opt/demonsaw_debian_64.tar.gz "http://demonsaw.com/download/latest/demonsaw_debian_64.tar.gz"
-tar -xzf /opt/demonsaw_debian_64.tar.gz -C /opt/demonsaw
+rm -f /opt/demonsaw_nix_64.tar.gz
+wget -O /opt/demonsaw_nix_64.tar.gz "https://demonsaw.com/download/demonsaw_nix_64.tar.gz"
+tar -xzf /opt/demonsaw_nix_64.tar.gz -C /opt/demonsaw
 chgrp -R staff /opt/demonsaw
-rm -f /opt/demonsaw_debian_64.tar.gz
+rm -f /opt/demonsaw_nix_64.tar.gz
 
 EOF
 
@@ -24,7 +24,7 @@ sudo chmod +x /opt/scripts/latest_demonsaw.sh
 
 # Icons for demonsaw
 
-sudo cat <<EOF>/usr/share/applications/demonsaw.desktop 
+sudo cat <<EOF>/usr/share/applications/demonsaw.desktop
 #!/usr/bin/env xdg-open
 
 [Desktop Entry]
@@ -41,7 +41,6 @@ EOF
 
 sudo chmod +x /usr/share/applications/demonsaw.desktop
 
-# Download demonsaw 
+# Download demonsaw
 
 sudo /opt/scripts/latest_demonsaw.sh
-
